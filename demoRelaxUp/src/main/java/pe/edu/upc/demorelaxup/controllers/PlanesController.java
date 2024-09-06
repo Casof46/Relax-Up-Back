@@ -4,9 +4,12 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.demorelaxup.dtos.PlanesDTO;
+import pe.edu.upc.demorelaxup.dtos.TotalIngresosbyPlanDTO;
+import pe.edu.upc.demorelaxup.dtos.TotalSuscripcionesByPlanDTO;
 import pe.edu.upc.demorelaxup.entities.Planes;
 import pe.edu.upc.demorelaxup.serviceinterfaces.IPlanesService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -37,5 +40,32 @@ public class PlanesController {
         ModelMapper m=new ModelMapper();
         Planes ci=m.map(dto,Planes.class);
         pS.update(ci);
+    }
+
+    @GetMapping("/cantidades")
+    public List<TotalSuscripcionesByPlanDTO> obtenerCantidad(){
+        List<String[]>lista=pS.totalSuscripcion();
+        List<TotalSuscripcionesByPlanDTO>listaDTO=new ArrayList<>();
+        for(String[] columna:lista){
+            TotalSuscripcionesByPlanDTO dto=new TotalSuscripcionesByPlanDTO();
+            dto.setNamePlan(columna[0]);
+            dto.setTotalSusByPlan(Integer.parseInt(columna[1]));
+            listaDTO.add(dto);
+        }
+        return listaDTO;
+    }
+
+    @GetMapping("/ingresos")
+    public List<TotalIngresosbyPlanDTO> obtenerMonto(){
+        List<String[]>lista=pS.totalIngreso();
+        List<TotalIngresosbyPlanDTO>listaDTO=new ArrayList<>();
+        for(String[] columna:lista){
+            TotalIngresosbyPlanDTO dto=new TotalIngresosbyPlanDTO();
+            dto.setNamePlan(columna[0]);
+            dto.setTotalMoneyByPlan(Double.parseDouble(columna[1]));
+            listaDTO.add(dto);
+        }
+        return listaDTO;
+
     }
 }

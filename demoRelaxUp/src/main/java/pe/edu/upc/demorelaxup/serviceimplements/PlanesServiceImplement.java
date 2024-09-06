@@ -22,4 +22,10 @@ public class PlanesServiceImplement implements IPlanesService {
 
     @Override
     public void update(Planes planes) { pR.save(planes);}
+
+    @Override
+    public List<String[]> totalSuscripcion() { return pR.totalSuscripcion(); }
+
+    @Override
+    public List<String[]> totalIngreso() { return pR.totalIngreso(); }
 }

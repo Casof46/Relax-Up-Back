@@ -11,4 +11,8 @@ public interface IPlanesService {
     public Planes listId(int id);
 
     public void update(Planes planes);
+
+    public List<String[]> totalSuscripcion();
+
+    public List<String[]> totalIngreso();
 }
