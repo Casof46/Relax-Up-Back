@@ -37,6 +37,26 @@ public class UsuarioController {
         Usuario ur=m.map(dto,Usuario.class);
         uS.insert(ur);
     }
+
+    @GetMapping("/{id}")
+    public UsuarioDTO listarID(@PathVariable("id") Integer id){
+        ModelMapper m=new ModelMapper();
+        UsuarioDTO dto=m.map(uS.listId(id),UsuarioDTO.class);
+        return dto;
+    }
+
+    @PutMapping
+    public void modificar(@RequestBody UsuarioDTO dto){
+        ModelMapper m=new ModelMapper();
+        Usuario mp=m.map(dto,Usuario.class);
+        uS.update(mp);
+    }
+
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable("id") Integer id){
+        uS.delete(id);
+    }
+
     @GetMapping("/cantidadForos")
     public List<CantidadForosByUsuariosDTO> ObtenerCantidadForos(){
             List<String[ ]>lista=uS.ForosByUsuario();

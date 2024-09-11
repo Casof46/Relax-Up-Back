@@ -23,6 +23,15 @@ public class UsuarioServiceImplement implements IUsuarioService {
     public void insert(Usuario uu) { uR.save(uu);}
 
     @Override
+    public Usuario listId(int id) {return uR.findById(id).orElse(new Usuario());}
+
+    @Override
+    public void update(Usuario usuario) {uR.save(usuario);}
+
+    @Override
+    public void delete(int id) {uR.deleteById(id);}
+
+    @Override
     public List<String[]> ForosByUsuario() {
         return uR.ForosByUsuario();
     }
