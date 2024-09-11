@@ -7,4 +7,5 @@ import java.util.List;
 public interface IEmergenciaService {
     public List<Emergencia> list();
     public void insert(Emergencia ee);
+    public Emergencia listId(int id);
 }
