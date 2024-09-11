@@ -32,4 +32,23 @@ public class EmergenciaController {
         Emergencia er=m.map(dto,Emergencia.class);
         eS.insert(er);
     }
+
+    @GetMapping("/{id}")
+    public EmergenciaDTO listarId(@PathVariable("id") Integer id){
+        ModelMapper m= new ModelMapper();
+        EmergenciaDTO dto=m.map(eS.listId(id),EmergenciaDTO.class);
+        return dto;
+    }
+
+    @PutMapping
+    public void modificar(@RequestBody EmergenciaDTO dto){
+        ModelMapper m = new ModelMapper();
+        Emergencia mp=m.map(dto,Emergencia.class);
+        eS.update(mp);
+    }
+
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable("id") Integer id){
+        eS.delete(id);
+    }
 }

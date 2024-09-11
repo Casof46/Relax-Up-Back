@@ -26,4 +26,12 @@ public class EmergenciaServiceImplement implements IEmergenciaService {
 
     @Override
     public Emergencia listId(int id) {return eR.findById(id).orElse(new Emergencia());}
+
+    @Override
+    public void update(Emergencia emergencia) {eR.save(emergencia);}
+
+    @Override
+    public void delete(int id) { eR.deleteById(id);}
 }
+
+
