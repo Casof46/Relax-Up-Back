@@ -11,4 +11,5 @@ public interface IEmergenciaService {
     public void update(Emergencia emergencia);
     public void delete(int id);
     public List<String[]> totalEmergencias();
+    public List<String[ ]> EmergenciaByUsuario();
 }

@@ -35,6 +35,11 @@ public class EmergenciaServiceImplement implements IEmergenciaService {
 
     @Override
     public List<String[]> totalEmergencias() { return eR.totalEmergencias(); }
+
+    @Override
+    public List<String[]> EmergenciaByUsuario() {
+        return eR.EmergenciaByUsuario();
+    }
 }
 
 
