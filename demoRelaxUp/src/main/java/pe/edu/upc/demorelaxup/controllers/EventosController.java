@@ -5,10 +5,12 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.demorelaxup.dtos.CantidadConfirmaronDTO;
 import pe.edu.upc.demorelaxup.dtos.EventosDTO;
 import pe.edu.upc.demorelaxup.entities.Eventos;
 import pe.edu.upc.demorelaxup.serviceinterfaces.IEventosService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -48,4 +50,18 @@ public class EventosController {
 
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") Integer id){ eS.delete(id);}
+
+    @GetMapping("/Confirmaron")
+    public List<CantidadConfirmaronDTO> ObtenerCantidadConfirmaron() {
+        List<String[ ]>lista=eS.confirmaron();
+        List<CantidadConfirmaronDTO>listaDTO=new ArrayList<>();
+        for (String[] columna:lista){
+            CantidadConfirmaronDTO dto=new CantidadConfirmaronDTO();
+            dto.setIdeventoC(Integer.parseInt(columna[0]));
+            dto.setTitulo(columna[1]);
+            dto.setCantidad_confirmado(Integer.parseInt(columna[2]));
+            listaDTO.add(dto);
+        }
+        return listaDTO;
+    }
 }

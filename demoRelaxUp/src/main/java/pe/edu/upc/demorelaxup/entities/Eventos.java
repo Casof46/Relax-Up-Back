@@ -2,6 +2,9 @@ package pe.edu.upc.demorelaxup.entities;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 @Entity
 @Table(name="Eventos")
 public class Eventos {
@@ -12,23 +15,26 @@ public class Eventos {
     private String titulo;
     @Column(name="actividad",nullable = false,length = 60)
     private String actividad;
-    @Column(name="fecha inicio",nullable = false,length = 10)
-    private String fechaInicio;
-    @Column(name = "fecha fin",nullable = false,length = 10)
-    private String fechaFin;
-    @Column(name = "hora",nullable = false,length = 10)
-    private String hora;
+    @Column(name="fecha inicio",nullable = false)
+    private LocalDate fechaInicio;
+    @Column(name = "fecha fin",nullable = false)
+    private LocalDate fechaFin;
+    @Column(name = "hora",nullable = false)
+    private LocalTime hora;
+    @Column(name = "confirmacion",nullable = false)
+    private boolean confirmacion;
     @ManyToOne
     @JoinColumn(name="idUsuario")
     private Usuario us;
     public Eventos(){}
-    public Eventos(int ideventos,String titulo, String actividad, String fechaInicio, String fechaFin, String hora, Usuario us) {
+    public Eventos(int ideventos,String titulo, String actividad, LocalDate fechaInicio, LocalDate fechaFin, LocalTime hora,boolean confirmacion, Usuario us) {
         this.ideventos = ideventos;
         this.titulo = titulo;
         this.actividad = actividad;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.hora = hora;
+        this.confirmacion = confirmacion;
         this.us = us;
     }
 
@@ -56,28 +62,36 @@ public class Eventos {
         this.actividad = actividad;
     }
 
-    public String getFechaInicio() {
+    public LocalDate getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(String fechaInicio) {
+    public void setFechaInicio(LocalDate fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public String getFechaFin() {
+    public LocalDate getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(String fechaFin) {
+    public void setFechaFin(LocalDate fechaFin) {
         this.fechaFin = fechaFin;
     }
 
-    public String getHora() {
+    public LocalTime getHora() {
         return hora;
     }
 
-    public void setHora(String hora) {
+    public void setHora(LocalTime hora) {
         this.hora = hora;
+    }
+
+    public boolean isConfirmacion() {
+        return confirmacion;
+    }
+
+    public void setConfirmacion(boolean confirmacion) {
+        this.confirmacion = confirmacion;
     }
 
     public Usuario getUs() {

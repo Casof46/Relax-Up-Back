@@ -12,4 +12,6 @@ public interface IEventosService {
     public void update(Eventos eventos);
 
     public void delete(int id);
+
+    public List<String[]> confirmaron();
 }

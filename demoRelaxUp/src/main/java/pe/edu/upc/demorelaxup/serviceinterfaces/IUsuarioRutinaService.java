@@ -14,4 +14,6 @@ public interface IUsuarioRutinaService {
     public void update(UsuarioRutina usuarioRutina);
 
     public void delete(int id);
+
+    public List<String[]> progresocompleto();
 }

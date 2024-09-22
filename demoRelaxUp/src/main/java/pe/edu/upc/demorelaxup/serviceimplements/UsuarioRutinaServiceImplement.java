@@ -29,4 +29,9 @@ public class UsuarioRutinaServiceImplement implements IUsuarioRutinaService {
 
     @Override
     public void delete(int id) { Uu.deleteById(id); }
+
+    @Override
+    public List<String[]> progresocompleto() {
+        return Uu.progresoCompletado();
+    }
 }

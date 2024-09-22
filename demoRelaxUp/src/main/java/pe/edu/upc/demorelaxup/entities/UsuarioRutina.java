@@ -2,21 +2,23 @@ package pe.edu.upc.demorelaxup.entities;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name="UsuarioRutina")
 public class UsuarioRutina {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idusuariorutina;
-    @Column(name = "fecha realizacion",nullable = false,length = 10)
-    private String fecharealizacion;
+    @Column(name = "fecharealizacion",nullable = false,length = 10)
+    private LocalDate fecharealizacion;
     @Column(name = "progreso",nullable = false,length = 3)
-    private String progreso;
+    private int progreso;
     @ManyToOne
     @JoinColumn(name="idUsuario")
     private Usuario us;
     public UsuarioRutina(){}
-    public UsuarioRutina(int idusuariorutina,String fecharealizacion, String progreso, Usuario us) {
+    public UsuarioRutina(int idusuariorutina,LocalDate fecharealizacion, int progreso, Usuario us) {
         this.idusuariorutina = idusuariorutina;
         this.fecharealizacion = fecharealizacion;
         this.progreso = progreso;
@@ -31,19 +33,19 @@ public class UsuarioRutina {
         this.idusuariorutina = idusuariorutina;
     }
 
-    public String getFecharealizacion() {
+    public LocalDate getFecharealizacion() {
         return fecharealizacion;
     }
 
-    public void setFecharealizacion(String fecharealizacion) {
+    public void setFecharealizacion(LocalDate fecharealizacion) {
         this.fecharealizacion = fecharealizacion;
     }
 
-    public String getProgreso() {
+    public int getProgreso() {
         return progreso;
     }
 
-    public void setProgreso(String progreso) {
+    public void setProgreso(int progreso) {
         this.progreso = progreso;
     }
 

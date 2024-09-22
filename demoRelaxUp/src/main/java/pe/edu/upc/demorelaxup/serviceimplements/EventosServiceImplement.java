@@ -15,17 +15,32 @@ public class EventosServiceImplement implements IEventosService {
     private IEventosRepository eS;
 
     @Override
-    public List<Eventos> list() { return eS.findAll(); }
+    public List<Eventos> list() {
+        return eS.findAll();
+    }
 
     @Override
-    public void insert(Eventos eventos) { eS.save(eventos); }
+    public void insert(Eventos eventos) {
+        eS.save(eventos);
+    }
 
     @Override
-    public Eventos listId(int id) { return eS.findById(id).orElse(new Eventos()); }
+    public Eventos listId(int id) {
+        return eS.findById(id).orElse(new Eventos());
+    }
 
     @Override
-    public void update(Eventos eventos) { eS.save(eventos); }
+    public void update(Eventos eventos) {
+        eS.save(eventos);
+    }
 
     @Override
-    public void delete(int id) { eS.deleteById(id); }
+    public void delete(int id) {
+        eS.deleteById(id);
+    }
+
+    @Override
+    public List<String[]> confirmaron() {
+        return eS.CantidadConfirmaron();
+    }
 }
