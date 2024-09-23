@@ -4,13 +4,89 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="38966729-a35b-4712-88f1-11a3623ed6fb" name="Changes" comment="" />
+=======
+    <list default="true" id="a83a8546-e0b4-4792-a924-7c264391ec71" name="Changes" comment="querys">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/controllers/EjercicioRutinaController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/controllers/EventosController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/controllers/ForosController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/controllers/MensajesForosController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/controllers/RutinaController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/controllers/TecnicasRelajacionController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/controllers/UsuarioRutinaController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/CantidadConfirmaronDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/CantidadEmergenciasByUsuariosDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/CantidadForosByUsuariosDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/CantidadMensajesForosDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/CantidadRutinasByUsuarioDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/EjercicioRutinaDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/EmergenciasByDiaDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/EventosDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/ForosDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/MensajesForosDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/ProgresoCompletadoDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/RutinaDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/TecnicasRelajacionDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/dtos/UsuarioRutinaDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/entities/EjercicioRutina.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/entities/Eventos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/entities/Foros.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/entities/MensajesForos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/entities/Rutina.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/entities/TecnicasRelajacion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/entities/UsuarioRutina.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/repositories/IEjercicioRutinaRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/repositories/IEventosRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/repositories/IForosRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/repositories/IMensajesForosRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/repositories/IRutinaRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/repositories/ITecnicasRelajacionRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/repositories/IUsuarioRutinaRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceimplements/EjercicioRutinaServiceImplement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceimplements/EventosServiceImplement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceimplements/ForosServiceImplement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceimplements/MensajesForosServiceImplement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceimplements/RutinaServiceImplement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceimplements/TecnicasRelajacionServiceImplement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceimplements/UsuarioRutinaServiceImplement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceinterfaces/IEjercicioRutinaService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceinterfaces/IEventosService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceinterfaces/IForosService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceinterfaces/IMensajesForosService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceinterfaces/IRutinaService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceinterfaces/ITecnicasRelajacionService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pe/edu/upc/demorelaxup/serviceinterfaces/IUsuarioRutinaService.class" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< Updated upstream
   <component name="Git.Settings">
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
+>>>>>>> Stashed changes
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
@@ -26,20 +102,38 @@
   }
 }]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
+<<<<<<< Updated upstream
   "customColor": "",
   "associatedIndex": 7
 }]]></component>
   <component name="ProjectId" id="2mSGWbTJKy3LlxySvWjMJoyoUJF" />
+=======
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2mOzhkdhufzoCovBjFXMy9vicDt" />
+>>>>>>> Stashed changes
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< Updated upstream
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Nueva carpeta/Relax-Up-Back",
+=======
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.DemoRelaxUpApplication.executor": "Run",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/relax up backend/Relax-Up-Back/demoRelaxUp",
+>>>>>>> Stashed changes
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,6 +142,19 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+<<<<<<< Updated upstream
+=======
+  <component name="RunManager">
+    <configuration name="DemoRelaxUpApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="demoRelaxUp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pe.edu.upc.demorelaxup.DemoRelaxUpApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+>>>>>>> Stashed changes
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -59,6 +166,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< Updated upstream
       <changelist id="38966729-a35b-4712-88f1-11a3623ed6fb" name="Changes" comment="" />
       <created>1727062601032</created>
       <option name="number" value="Default" />
@@ -66,9 +174,34 @@
       <updated>1727062601032</updated>
       <workItem from="1727062602481" duration="534000" />
     </task>
+=======
+      <changelist id="a83a8546-e0b4-4792-a924-7c264391ec71" name="Changes" comment="" />
+      <created>1726962531753</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726962531753</updated>
+      <workItem from="1726962532839" duration="1557000" />
+    </task>
+    <task id="LOCAL-00001" summary="querys">
+      <option name="closed" value="true" />
+      <created>1726963293464</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726963293465</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+>>>>>>> Stashed changes
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< Updated upstream
+=======
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="querys" />
+    <option name="LAST_COMMIT_MESSAGE" value="querys" />
+  </component>
+>>>>>>> Stashed changes
 </project>
