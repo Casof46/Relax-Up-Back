@@ -10,7 +10,7 @@ public class Planes {
     public int idPlan;
     @Column(name = "nombrePlan", nullable = false, length = 20)
     public String nombrePlan;
-    @Column(name = "descripcion", nullable = false, length = 20)
+    @Column(name = "descripcion", nullable = false, length = 500)
     public String descripcion;
     @Column(name = "precio", nullable = false, length = 20)
     public double precio;
