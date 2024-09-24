@@ -11,15 +11,15 @@ public class CantidadForosByUsuariosDTO {
     }
 
     public int getQuantityForos() {
-        return QuantityForos;
+        return quantityForos;
     }
 
     public void setQuantityForos(int quantityForos) {
-        QuantityForos = quantityForos;
+        quantityForos = quantityForos;
     }
 
     public String nombreUser;
-    public int QuantityForos;
+    public int quantityForos;
 
 
 
