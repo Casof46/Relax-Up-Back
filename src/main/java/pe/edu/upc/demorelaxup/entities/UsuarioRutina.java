@@ -1,8 +1,10 @@
 package pe.edu.upc.demorelaxup.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name="UsuarioRutina")
@@ -14,15 +16,16 @@ public class UsuarioRutina {
     private LocalDate fecharealizacion;
     @Column(name = "progreso",nullable = false,length = 3)
     private int progreso;
-    @ManyToOne
-    @JoinColumn(name="idUsuario")
-    private Usuario us;
+    @JsonIgnore
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "idUsuario")
+    private List<Usuario> usuario;
     public UsuarioRutina(){}
-    public UsuarioRutina(int idusuariorutina,LocalDate fecharealizacion, int progreso, Usuario us) {
+    public UsuarioRutina(int idusuariorutina,LocalDate fecharealizacion, int progreso, List<Usuario> usuario) {
         this.idusuariorutina = idusuariorutina;
         this.fecharealizacion = fecharealizacion;
         this.progreso = progreso;
-        this.us = us;
+        this.usuario = usuario;
     }
 
     public int getIdusuariorutina() {
@@ -49,11 +52,11 @@ public class UsuarioRutina {
         this.progreso = progreso;
     }
 
-    public Usuario getUs() {
-        return us;
+    public List<Usuario> getUsuario() {
+        return usuario;
     }
 
-    public void setUs(Usuario us) {
-        this.us = us;
+    public void setUsuario(List<Usuario> usuario) {
+        this.usuario = usuario;
     }
 }
