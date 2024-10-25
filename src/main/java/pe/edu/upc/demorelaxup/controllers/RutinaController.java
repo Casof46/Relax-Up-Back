@@ -62,10 +62,11 @@ public class RutinaController {
     public List<CantidadRutinasByUsuarioDTO> ObtenerCantidadRutinas(){
         List<String[ ]>lista=rS.RutinasByUsuario();
         List<CantidadRutinasByUsuarioDTO>listaDTO=new ArrayList<>();
-        for(String[ ] columna:lista){
+        for(String[] columna:lista){
             CantidadRutinasByUsuarioDTO dto=new CantidadRutinasByUsuarioDTO();
-            dto.setNombreUser(columna[0]);
-            dto.setQuantityRutinas(Integer.parseInt(columna[1]));
+            dto.setIdrutina(Integer.parseInt(columna[0]));
+            dto.setNombre_usuario(columna[1]);
+            dto.setCantidad_rutinas(Integer.parseInt(columna[2]));
             listaDTO.add(dto);
 
         }

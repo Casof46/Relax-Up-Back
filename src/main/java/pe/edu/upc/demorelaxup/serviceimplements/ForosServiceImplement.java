@@ -33,4 +33,9 @@ public class ForosServiceImplement implements IForosService {
     public List<String[]> CantidadMensajesForos() {
         return fR.CantidadMensajesForos();
     }
+
+    @Override
+    public List<String[]> CamtidadForos() {
+        return fR.CantidadForos();
+    }
 }

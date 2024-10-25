@@ -17,15 +17,20 @@ public class UsuarioRutina {
     @Column(name = "progreso",nullable = false,length = 3)
     private int progreso;
     @JsonIgnore
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idUsuario")
-    private List<Usuario> usuario;
+    private Usuario usuario;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "idRutina")
+    private Rutina rutina;
     public UsuarioRutina(){}
-    public UsuarioRutina(int idusuariorutina,LocalDate fecharealizacion, int progreso, List<Usuario> usuario) {
+    public UsuarioRutina(int idusuariorutina,LocalDate fecharealizacion, int progreso, Usuario usuario,Rutina rutina) {
         this.idusuariorutina = idusuariorutina;
         this.fecharealizacion = fecharealizacion;
         this.progreso = progreso;
         this.usuario = usuario;
+        this.rutina = rutina;
     }
 
     public int getIdusuariorutina() {
@@ -52,11 +57,17 @@ public class UsuarioRutina {
         this.progreso = progreso;
     }
 
-    public List<Usuario> getUsuario() {
+    public Usuario getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(List<Usuario> usuario) {
-        this.usuario = usuario;
+    public void setUsuario(Usuario usuario) { this.usuario = usuario; }
+
+    public Rutina getRutina() {
+        return rutina;
+    }
+
+    public void setRutina(Rutina rutina) {
+        this.rutina = rutina;
     }
 }

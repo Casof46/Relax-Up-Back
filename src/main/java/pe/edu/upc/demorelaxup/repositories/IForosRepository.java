@@ -15,4 +15,9 @@ public interface IForosRepository extends JpaRepository<Foros,Integer> {
             " INNER JOIN usuario u ON mf.id_usuario = u.id_usuario\n" +
             " GROUP BY f.titulo, u.nombre_usuario",nativeQuery = true)
     public List<String[]> CantidadMensajesForos();
+    @Query(value = "Select u.nombre_usuario, count(*) as cantidad_foros\n" +
+            "        from usuario u inner join foros f \n" +
+            "        on u.id_usuario=f.id_usuario \n" +
+            "        group by u.nombre_usuario",nativeQuery = true)
+    public List<String[]> CantidadForos();
 }

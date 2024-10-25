@@ -1,26 +1,22 @@
 package pe.edu.upc.demorelaxup.dtos;
 
 public class CantidadForosByUsuariosDTO {
+    public String nombre_usuario;
+    public int cantidad_foros;
 
-    public String getNombreUser() {
-        return nombreUser;
+    public String getNombre_usuario() {
+        return nombre_usuario;
     }
 
-    public void setNombreUser(String nombreUser) {
-        this.nombreUser = nombreUser;
+    public void setNombre_usuario(String nombre_usuario) {
+        this.nombre_usuario = nombre_usuario;
     }
 
-    public int getQuantityForos() {
-        return quantityForos;
+    public int getCantidad_foros() {
+        return cantidad_foros;
     }
 
-    public void setQuantityForos(int quantityForos) {
-        quantityForos = quantityForos;
+    public void setCantidad_foros(int cantidad_foros) {
+        this.cantidad_foros = cantidad_foros;
     }
-
-    public String nombreUser;
-    public int quantityForos;
-
-
-
 }

@@ -7,7 +7,7 @@ public class MetodoPagoDTO {
 
     private String tipoPago;
 
-    private Usuario Us;
+    private Usuario usuario;
 
     public int getIdMetodoPago() {
         return idMetodoPago;
@@ -25,11 +25,11 @@ public class MetodoPagoDTO {
         this.tipoPago = tipoPago;
     }
 
-    public Usuario getUs() {
-        return Us;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUs(Usuario us) {
-        Us = us;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

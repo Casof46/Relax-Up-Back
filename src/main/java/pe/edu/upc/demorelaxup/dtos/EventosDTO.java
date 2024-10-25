@@ -1,12 +1,20 @@
 package pe.edu.upc.demorelaxup.dtos;
 
+import pe.edu.upc.demorelaxup.entities.Usuario;
+
+import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.List;
+
 public class EventosDTO {
     private int ideventos;
     private String titulo;
     private String actividad;
-    private String fechaInicio;
-    private String fechaFin;
-    private String hora;
+    private LocalDate fechaInicio;
+    private LocalDate fechaFin;
+    private LocalTime hora;
+    private Usuario usuario;
 
     public int getIdeventos() {
         return ideventos;
@@ -32,27 +40,35 @@ public class EventosDTO {
         this.actividad = actividad;
     }
 
-    public String getFechaInicio() {
+    public LocalDate getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(String fechaInicio) {
+    public void setFechaInicio(LocalDate fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public String getFechaFin() {
+    public LocalDate getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(String fechaFin) {
+    public void setFechaFin(LocalDate fechaFin) {
         this.fechaFin = fechaFin;
     }
 
-    public String getHora() {
+    public LocalTime getHora() {
         return hora;
     }
 
-    public void setHora(String hora) {
+    public void setHora(LocalTime hora) {
         this.hora = hora;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

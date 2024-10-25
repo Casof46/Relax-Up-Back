@@ -23,7 +23,6 @@ public class EventosController {
     private IEventosService eS;
     @GetMapping
     public List<EventosDTO> listar(){
-
         return eS.list().stream().map(x->{
             ModelMapper m = new ModelMapper();
             return m.map(x, EventosDTO.class);

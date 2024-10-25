@@ -1,6 +1,7 @@
 package pe.edu.upc.demorelaxup.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -13,6 +14,7 @@ public class EjercicioRutina {
     private String tituloEjercicioRutina;
     @Column(name = "descripcionEjercicioRutina", nullable = false, length = 200)
     private String descripcionEjercicioRutina;
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "idRutina")
     private Rutina ru;

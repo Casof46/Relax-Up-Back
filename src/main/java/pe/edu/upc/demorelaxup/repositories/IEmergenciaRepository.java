@@ -19,10 +19,10 @@ public interface IEmergenciaRepository extends JpaRepository<Emergencia,Integer>
             "\tfecha_emergencia", nativeQuery = true)
     public List<String[]> totalEmergencias();
 
-    @Query(value = "Select u.nombre_usuario, count(*)\n" +
-            " from usuario u inner join foros f \n" +
-            " on u.id_usuario=f.id_usuario \n" +
-            " group by u.nombre_usuario",nativeQuery = true)
+    @Query(value = "Select u.nombre_usuario, count(f.id_emergencia)\n" +
+            "            from usuario u inner join emergencia f \n" +
+            "            on u.id_usuario=f.id_usuario \n" +
+            "            group by u.nombre_usuario",nativeQuery = true)
     public List<String[ ]> EmergenciaByUsuario();
 
 }

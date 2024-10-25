@@ -1,8 +1,11 @@
 package pe.edu.upc.demorelaxup.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
+
 @Entity
 @Table(name = "Suscripciones")
 public class Suscripciones {
@@ -15,11 +18,9 @@ public class Suscripciones {
     @Column(name = "fechaFin", nullable = false)
     private LocalDate fechaFin;
     @OneToOne
-    @JoinColumn(name = "idUsuario")
-    private Usuario usuario;
-    @OneToOne
     @JoinColumn(name = "idMetodoPago")
     private MetodoPago metodoPago;
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "idPlan")
     private Planes planes;
@@ -31,7 +32,6 @@ public class Suscripciones {
         this.idSuscripcion = idSuscripcion;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
-        this.usuario = usuario;
         this.metodoPago = metodoPago;
         this.planes = planes;
     }
@@ -60,13 +60,6 @@ public class Suscripciones {
         this.fechaFin = fechaFin;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
 
     public MetodoPago getMetodoPago() {
         return metodoPago;

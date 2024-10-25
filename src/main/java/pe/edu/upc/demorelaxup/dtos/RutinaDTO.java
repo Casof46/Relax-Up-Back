@@ -1,5 +1,6 @@
 package pe.edu.upc.demorelaxup.dtos;
 
+import pe.edu.upc.demorelaxup.entities.TecnicasRelajacion;
 import pe.edu.upc.demorelaxup.entities.Usuario;
 
 public class RutinaDTO {
@@ -7,7 +8,7 @@ public class RutinaDTO {
     private String nombreRutina;
     private String descripcionRutina;
     private int duracionRutina;
-    private Usuario us;
+    private TecnicasRelajacion tecnicasRelajacion;
 
     public int getIdRutina() {
         return idRutina;
@@ -41,11 +42,11 @@ public class RutinaDTO {
         this.duracionRutina = duracionRutina;
     }
 
-    public Usuario getUs() {
-        return us;
+    public TecnicasRelajacion getTecnicasRelajacion() {
+        return tecnicasRelajacion;
     }
 
-    public void setUs(Usuario us) {
-        this.us = us;
+    public void setTecnicasRelajacion(TecnicasRelajacion tecnicasRelajacion) {
+        this.tecnicasRelajacion = tecnicasRelajacion;
     }
 }

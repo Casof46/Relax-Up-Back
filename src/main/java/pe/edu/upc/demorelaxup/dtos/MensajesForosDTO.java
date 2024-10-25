@@ -7,8 +7,8 @@ public class MensajesForosDTO {
     private int idMensajesForos;
     private String contenido;
     private LocalDate fechaPublicacion;
-    private Usuario us;
-    private Foros fs;
+    private Usuario usuario;
+    private Foros foros;
 
     public int getIdMensajesForos() {
         return idMensajesForos;
@@ -34,19 +34,19 @@ public class MensajesForosDTO {
         this.fechaPublicacion = fechaPublicacion;
     }
 
-    public Usuario getUs() {
-        return us;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUs(Usuario us) {
-        us = us;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    public Foros getFs() {
-        return fs;
+    public Foros getForos() {
+        return foros;
     }
 
-    public void setFs(Foros fs) {
-        fs = fs;
+    public void setForos(Foros foros) {
+        this.foros = foros;
     }
 }

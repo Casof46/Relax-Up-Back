@@ -4,13 +4,14 @@ import pe.edu.upc.demorelaxup.entities.Usuario;
 
 import java.sql.Time;
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class EmergenciaDTO {
     private int idEmergencia;
     private LocalDate fechaEmergencia;
-    private Time horaEmergencia;
+    private LocalTime horaEmergencia;
 
-    private Usuario us;
+    private Usuario usuario;
 
 
     public int getIdEmergencia() {
@@ -29,19 +30,19 @@ public class EmergenciaDTO {
         this.fechaEmergencia = fechaEmergencia;
     }
 
-    public Time getHoraEmergencia() {
+    public LocalTime getHoraEmergencia() {
         return horaEmergencia;
     }
 
-    public void setHoraEmergencia(Time horaEmergencia) {
+    public void setHoraEmergencia(LocalTime horaEmergencia) {
         this.horaEmergencia = horaEmergencia;
     }
 
-    public Usuario getUs() {
-        return us;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUs(Usuario us) {
-        this.us = us;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

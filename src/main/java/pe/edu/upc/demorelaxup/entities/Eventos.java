@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.persistence.criteria.Fetch;
 
+import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -27,14 +28,14 @@ public class Eventos {
     @Column(name = "confirmacion", nullable = false)
     private boolean confirmacion;
     @JsonIgnore
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idUsuario")
-    private List<Usuario> usuario;
+    private Usuario usuario;
 
     public Eventos() {
     }
 
-    public Eventos(int ideventos, String titulo, String actividad, LocalDate fechaInicio, LocalDate fechaFin, LocalTime hora, boolean confirmacion, List<Usuario> usuario) {
+    public Eventos(int ideventos, String titulo, String actividad, LocalDate fechaInicio, LocalDate fechaFin, LocalTime hora, boolean confirmacion, Usuario usuario) {
         this.ideventos = ideventos;
         this.titulo = titulo;
         this.actividad = actividad;
@@ -42,7 +43,7 @@ public class Eventos {
         this.fechaFin = fechaFin;
         this.hora = hora;
         this.confirmacion = confirmacion;
-        this.usuario = usuario;
+        this.usuario=usuario;
     }
 
     public int getIdeventos() {
@@ -101,12 +102,11 @@ public class Eventos {
         this.confirmacion = confirmacion;
     }
 
-    public List<Usuario> getUsuario() {
+    public Usuario getUsuario() {
         return usuario;
-
     }
 
-    public void setUsuario(List<Usuario> usuario) {
+    public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
 }

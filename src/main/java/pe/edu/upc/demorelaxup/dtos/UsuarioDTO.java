@@ -10,8 +10,7 @@ public class UsuarioDTO {
     private int telefonoUsuario;
     private String contrasenaUsuario;
     private int progresoUsuario;
-
-    private Rol ro;
+    private Rol rol;
 
     public String getNombreUsuario() {
         return nombreUsuario;
@@ -61,11 +60,11 @@ public class UsuarioDTO {
         this.progresoUsuario = progresoUsuario;
     }
 
-    public Rol getRo() {
-        return ro;
+    public Rol getRol() {
+        return rol;
     }
 
-    public void setRo(Rol ro) {
-        this.ro = ro;
+    public void setRol(Rol rol) {
+        this.rol = rol;
     }
 }
