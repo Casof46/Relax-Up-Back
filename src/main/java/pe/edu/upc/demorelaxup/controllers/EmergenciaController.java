@@ -4,7 +4,6 @@ package pe.edu.upc.demorelaxup.controllers;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.demorelaxup.dtos.CantidadEmergenciasByUsuariosDTO;
 import pe.edu.upc.demorelaxup.dtos.EmergenciaDTO;
@@ -19,8 +18,6 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/emergencias")
-@PreAuthorize("hasAuthority('ADMIN')")
-@SecurityRequirement(name = "javasecurity")
 public class EmergenciaController {
 
     @Autowired
