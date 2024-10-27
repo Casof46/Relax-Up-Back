@@ -10,9 +10,7 @@ public class EmergenciaDTO {
     private int idEmergencia;
     private LocalDate fechaEmergencia;
     private LocalTime horaEmergencia;
-
     private Usuario usuario;
-
 
     public int getIdEmergencia() {
         return idEmergencia;

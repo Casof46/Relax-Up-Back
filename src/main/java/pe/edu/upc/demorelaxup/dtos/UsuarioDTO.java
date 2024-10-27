@@ -3,7 +3,6 @@ package pe.edu.upc.demorelaxup.dtos;
 import pe.edu.upc.demorelaxup.entities.Rol;
 
 public class UsuarioDTO {
-
     private int idUsuario;
     private String nombreUsuario;
     private String correoUsuario;

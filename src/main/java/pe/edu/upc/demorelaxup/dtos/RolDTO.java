@@ -1,7 +1,6 @@
 package pe.edu.upc.demorelaxup.dtos;
 
 public class RolDTO {
-
     private int idRol;
     private String nombreRol;
 

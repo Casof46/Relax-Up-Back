@@ -4,7 +4,6 @@ import pe.edu.upc.demorelaxup.entities.Rutina;
 import pe.edu.upc.demorelaxup.entities.Usuario;
 
 import java.time.LocalDate;
-import java.util.List;
 
 public class UsuarioRutinaDTO {
     private int idusuariorutina;
