@@ -14,5 +14,6 @@ public interface IForosService {
     public void delete(int id);
 
     public List<String[]> CantidadMensajesForos();
+    public List<String[ ]> CamtidadForos();
 }
 

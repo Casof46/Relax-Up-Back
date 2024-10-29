@@ -1,5 +1,6 @@
 package pe.edu.upc.demorelaxup.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -18,21 +19,22 @@ public class Usuario {
     private String contrasenaUsuario;
     @Column(name = "progresoUsuario", nullable = false, length = 10)
     private int progresoUsuario;
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "idRol")
-    private Rol ro;
+    private Rol rol;
 
     public Usuario() {
     }
 
-    public Usuario(int idUsuario, String nombreUsuario, String correoUsuario, int telefonoUsuario, String contrasenaUsuario, int progresoUsuario, Rol ro) {
+    public Usuario(int idUsuario, String nombreUsuario, String correoUsuario, int telefonoUsuario, String contrasenaUsuario, int progresoUsuario, Rol rol) {
         this.idUsuario = idUsuario;
         this.nombreUsuario = nombreUsuario;
         this.correoUsuario = correoUsuario;
         this.telefonoUsuario = telefonoUsuario;
         this.contrasenaUsuario = contrasenaUsuario;
         this.progresoUsuario = progresoUsuario;
-        this.ro = ro;
+        this.rol = rol;
     }
 
     public int getIdUsuario() {
@@ -83,11 +85,11 @@ public class Usuario {
         this.progresoUsuario = progresoUsuario;
     }
 
-    public Rol getRo() {
-        return ro;
+    public Rol getRol() {
+        return rol;
     }
 
-    public void setRo(Rol ro) {
-        this.ro = ro;
+    public void setRol(Rol rol) {
+        this.rol = rol;
     }
 }

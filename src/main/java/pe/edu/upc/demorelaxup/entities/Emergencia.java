@@ -1,10 +1,12 @@
 package pe.edu.upc.demorelaxup.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.sql.Time;
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "Emergencia")
@@ -15,19 +17,20 @@ public class Emergencia {
     @Column(name = "fechaEmergencia",nullable = false)
     private LocalDate fechaEmergencia;
     @Column(name = "horaEmergencia",nullable = false)
-    private Time horaEmergencia;
+    private LocalTime horaEmergencia;
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="idUsuario")
-    private Usuario us;
+    private Usuario usuario;
 
     public Emergencia() {
     }
 
-    public Emergencia(int idEmergencia, LocalDate fechaEmergencia, Time horaEmergencia, Usuario us) {
+    public Emergencia(int idEmergencia, LocalDate fechaEmergencia, LocalTime horaEmergencia, Usuario usuario) {
         this.idEmergencia = idEmergencia;
         this.fechaEmergencia = fechaEmergencia;
         this.horaEmergencia = horaEmergencia;
-        this.us = us;
+        this.usuario = usuario;
     }
 
     public int getIdEmergencia() {
@@ -46,19 +49,19 @@ public class Emergencia {
         this.fechaEmergencia = fechaEmergencia;
     }
 
-    public Time getHoraEmergencia() {
+    public LocalTime getHoraEmergencia() {
         return horaEmergencia;
     }
 
-    public void setHoraEmergencia(Time horaEmergencia) {
+    public void setHoraEmergencia(LocalTime horaEmergencia) {
         this.horaEmergencia = horaEmergencia;
     }
 
-    public Usuario getUs() {
-        return us;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUs(Usuario us) {
-        this.us = us;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

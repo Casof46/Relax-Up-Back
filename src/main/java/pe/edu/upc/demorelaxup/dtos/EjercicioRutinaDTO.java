@@ -6,7 +6,7 @@ public class EjercicioRutinaDTO {
     private int idEjercicioRutina;
     private String tituloEjercicioRutina;
     private String descripcionEjercicioRutina;
-    private Rutina ru;
+    private Rutina rutina;
 
     public int getIdEjercicioRutina() {
         return idEjercicioRutina;
@@ -32,11 +32,11 @@ public class EjercicioRutinaDTO {
         this.descripcionEjercicioRutina = descripcionEjercicioRutina;
     }
 
-    public Rutina getRu() {
-        return ru;
+    public Rutina getRutina() {
+        return rutina;
     }
 
-    public void setRu(Rutina ru) {
-        this.ru = ru;
+    public void setRutina(Rutina rutina) {
+        this.rutina = rutina;
     }
 }

@@ -1,13 +1,9 @@
 package pe.edu.upc.demorelaxup.dtos;
 
 public class PlanesDTO {
-
     public int idPlan;
-
     public String nombrePlan;
-
     public String descripcion;
-
     public double precio;
 
     public int getIdPlan() {

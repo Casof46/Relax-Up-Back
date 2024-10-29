@@ -1,4 +1,5 @@
 package pe.edu.upc.demorelaxup.entities;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -9,17 +10,23 @@ public class Foros {
     private int idForos;
     @Column(name = "titulo",nullable = false, length = 40)
     private String titulo;
-    @ManyToOne
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="idUsuario")
-    private Usuario us;
+    private Usuario usuario;
 
     public Foros() {
     }
-    public Foros(int idForos, String titulo, Usuario us) {
+    public Foros(int idForos, String titulo, Usuario usuario) {
         this.idForos = idForos;
         this.titulo = titulo;
-        this.us = us;
+        this.usuario=usuario;
     }
+
+    public int getIdForos() {
+        return idForos;
+    }
+
     public void setIdForos(int idForos) {
         this.idForos = idForos;
     }
@@ -32,11 +39,11 @@ public class Foros {
         this.titulo = titulo;
     }
 
-    public Usuario getUs() {
-        return us;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUs(Usuario us) {
-        us = us;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

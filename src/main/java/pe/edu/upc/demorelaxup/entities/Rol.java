@@ -12,11 +12,8 @@ public class Rol {
     @Column(name = "nombreRol",nullable = false,length = 70)
     private String nombreRol;
 
-
     public Rol() {
     }
-
-
     public Rol(int idRol, String nombreRol) {
         this.idRol = idRol;
         this.nombreRol = nombreRol;
