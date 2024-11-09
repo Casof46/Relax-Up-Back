@@ -7,13 +7,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@SecurityScheme(
-        name = "javasecurity",
-        scheme = "Bearer",
-        bearerFormat = "JWT",
-        type = SecuritySchemeType.HTTP,
-        in = SecuritySchemeIn.HEADER
-)
 public class DemoRelaxUpApplication {
 
     public static void main(String[] args) {
