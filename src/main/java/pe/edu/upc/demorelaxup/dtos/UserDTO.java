@@ -2,10 +2,10 @@ package pe.edu.upc.demorelaxup.dtos;
 
 public class UserDTO {
     private Long id;
-
     private String username;
     private String password;
     private Boolean enabled;
+
 
     public Long getId() {
         return id;

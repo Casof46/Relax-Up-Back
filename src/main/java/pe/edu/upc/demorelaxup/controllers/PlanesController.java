@@ -52,8 +52,9 @@ public class PlanesController {
         List<TotalSuscripcionesByPlanDTO>listaDTO=new ArrayList<>();
         for(String[] columna:lista){
             TotalSuscripcionesByPlanDTO dto=new TotalSuscripcionesByPlanDTO();
-            dto.setNamePlan(columna[0]);
-            dto.setTotalSusByPlan(Integer.parseInt(columna[1]));
+            dto.setId_plan(Integer.parseInt(columna[0]));
+            dto.setNombre_plan(columna[1]);
+            dto.setTotal_suscripciones(Integer.parseInt(columna[2]));
             listaDTO.add(dto);
         }
         return listaDTO;
@@ -65,8 +66,9 @@ public class PlanesController {
         List<TotalIngresosbyPlanDTO>listaDTO=new ArrayList<>();
         for(String[] columna:lista){
             TotalIngresosbyPlanDTO dto=new TotalIngresosbyPlanDTO();
-            dto.setNamePlan(columna[0]);
-            dto.setTotalMoneyByPlan(Double.parseDouble(columna[1]));
+            dto.setId_plan(Integer.parseInt(columna[0]));
+            dto.setNombre_plan(columna[1]);
+            dto.setTotal_ingresos(Double.parseDouble(columna[2]));
             listaDTO.add(dto);
         }
         return listaDTO;

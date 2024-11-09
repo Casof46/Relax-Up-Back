@@ -1,6 +1,7 @@
 package pe.edu.upc.demorelaxup.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -15,19 +16,19 @@ public class Rutina {
     private String descripcionRutina;
     @Column(name = "duracionRutina",nullable = false)
     private int duracionRutina;
-    @ManyToOne
-    @JoinColumn(name = "idUsuario")
-    private Usuario us;
-
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "idTecnicaRelajacion")
+    private TecnicasRelajacion tecnicasRelajacion;
     public Rutina() {
     }
 
-    public Rutina(int idRutina, String nombreRutina, String descripcionRutina, int duracionRutina, Usuario us) {
+    public Rutina(int idRutina, String nombreRutina, String descripcionRutina, int duracionRutina,TecnicasRelajacion tecnicasRelajacion) {
         this.idRutina = idRutina;
         this.nombreRutina = nombreRutina;
         this.descripcionRutina = descripcionRutina;
         this.duracionRutina = duracionRutina;
-        this.us = us;
+        this.tecnicasRelajacion = tecnicasRelajacion;
     }
 
     public int getIdRutina() {
@@ -62,11 +63,11 @@ public class Rutina {
         this.duracionRutina = duracionRutina;
     }
 
-    public Usuario getUs() {
-        return us;
+    public TecnicasRelajacion getTecnicasRelajacion() {
+        return tecnicasRelajacion;
     }
 
-    public void setUs(Usuario us) {
-        this.us = us;
+    public void setTecnicasRelajacion(TecnicasRelajacion tecnicasRelajacion) {
+        this.tecnicasRelajacion = tecnicasRelajacion;
     }
 }

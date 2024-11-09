@@ -23,7 +23,6 @@ public class UsuarioRutinaController {
     private IUsuarioRutinaService Uu;
     @GetMapping
     public List<UsuarioRutinaDTO> listar() {
-
         return Uu.list().stream().map(x->{
             ModelMapper m = new ModelMapper();
             return m.map(x, UsuarioRutinaDTO.class);

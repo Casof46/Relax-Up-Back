@@ -4,6 +4,7 @@ public class CantidadConfirmaronDTO {
     public int ideventoC;
     public String titulo;
     public int cantidad_confirmado;
+
     public int getIdeventoC() {
         return ideventoC;
     }

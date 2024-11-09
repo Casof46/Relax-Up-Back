@@ -5,19 +5,13 @@ import pe.edu.upc.demorelaxup.entities.Planes;
 import pe.edu.upc.demorelaxup.entities.Usuario;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class SuscripcionesDTO {
-
     private int idSuscripcion;
-
     private LocalDate fechaInicio;
-
     private LocalDate fechaFin;
-
-    private Usuario usuario;
-
     private MetodoPago metodoPago;
-
     private Planes planes;
 
     public int getIdSuscripcion() {
@@ -44,13 +38,6 @@ public class SuscripcionesDTO {
         this.fechaFin = fechaFin;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
 
     public MetodoPago getMetodoPago() {
         return metodoPago;

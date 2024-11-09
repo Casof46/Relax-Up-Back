@@ -1,4 +1,5 @@
 package pe.edu.upc.demorelaxup.entities;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -13,21 +14,23 @@ public class MensajesForos {
     private String contenido;
     @Column(name = "fechaPublicacion",nullable = false)
     private LocalDate fechaPublicacion;
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="idUsuario")
-    private Usuario us;
+    private Usuario usuario;
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="idForos")
-    private Foros fs;
+    private Foros foros;
     public MensajesForos (){
 
     }
-    public MensajesForos(int idMensajesForos, String contenido, LocalDate fechaPublicacion, Usuario us, Foros fs) {
+    public MensajesForos(int idMensajesForos, String contenido, LocalDate fechaPublicacion, Usuario usuario, Foros foros) {
         this.idMensajesForos = idMensajesForos;
         this.contenido = contenido;
         this.fechaPublicacion = fechaPublicacion;
-        this.us = us;
-        this.fs =fs;
+        this.usuario = usuario;
+        this.foros = foros;
     }
     public int getIdMensajesForos() {
         return idMensajesForos;
@@ -53,19 +56,19 @@ public class MensajesForos {
         this.fechaPublicacion = fechaPublicacion;
     }
 
-    public Usuario getUs() {
-        return us;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUs(Usuario us) {
-        us = us;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    public Foros getFs() {
-        return fs;
+    public Foros getForos() {
+        return foros;
     }
 
-    public void setFs(Foros fs) {
-        fs = fs;
+    public void setForos(Foros foros) {
+        this.foros = foros;
     }
 }

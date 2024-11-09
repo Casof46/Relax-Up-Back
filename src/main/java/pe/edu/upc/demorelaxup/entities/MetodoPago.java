@@ -1,5 +1,6 @@
 package pe.edu.upc.demorelaxup.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -10,17 +11,18 @@ public class MetodoPago {
     private int idMetodoPago;
     @Column(name = "tipoPago", nullable = false, length = 20)
     private String tipoPago;
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "idUsuario")
-    private Usuario Us;
+    private Usuario usuario;
 
     public MetodoPago() {
     }
 
-    public MetodoPago(int idMetodoPago, String tipoPago, Usuario us) {
+    public MetodoPago(int idMetodoPago, String tipoPago, Usuario usuario) {
         this.idMetodoPago = idMetodoPago;
         this.tipoPago = tipoPago;
-        Us = us;
+        this.usuario = usuario;
     }
 
     public int getIdMetodoPago() {
@@ -39,11 +41,11 @@ public class MetodoPago {
         this.tipoPago = tipoPago;
     }
 
-    public Usuario getUs() {
-        return Us;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUs(Usuario us) {
-        Us = us;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

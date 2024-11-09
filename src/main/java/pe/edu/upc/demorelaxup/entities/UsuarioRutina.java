@@ -1,8 +1,10 @@
 package pe.edu.upc.demorelaxup.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name="UsuarioRutina")
@@ -14,15 +16,21 @@ public class UsuarioRutina {
     private LocalDate fecharealizacion;
     @Column(name = "progreso",nullable = false,length = 3)
     private int progreso;
-    @ManyToOne
-    @JoinColumn(name="idUsuario")
-    private Usuario us;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "idUsuario")
+    private Usuario usuario;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "idRutina")
+    private Rutina rutina;
     public UsuarioRutina(){}
-    public UsuarioRutina(int idusuariorutina,LocalDate fecharealizacion, int progreso, Usuario us) {
+    public UsuarioRutina(int idusuariorutina,LocalDate fecharealizacion, int progreso, Usuario usuario,Rutina rutina) {
         this.idusuariorutina = idusuariorutina;
         this.fecharealizacion = fecharealizacion;
         this.progreso = progreso;
-        this.us = us;
+        this.usuario = usuario;
+        this.rutina = rutina;
     }
 
     public int getIdusuariorutina() {
@@ -49,11 +57,17 @@ public class UsuarioRutina {
         this.progreso = progreso;
     }
 
-    public Usuario getUs() {
-        return us;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUs(Usuario us) {
-        this.us = us;
+    public void setUsuario(Usuario usuario) { this.usuario = usuario; }
+
+    public Rutina getRutina() {
+        return rutina;
+    }
+
+    public void setRutina(Rutina rutina) {
+        this.rutina = rutina;
     }
 }

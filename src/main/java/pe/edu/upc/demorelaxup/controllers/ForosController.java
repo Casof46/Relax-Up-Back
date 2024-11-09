@@ -73,4 +73,16 @@ public class ForosController {
      }
      return listaDTO;
     }
+    @GetMapping("/cantidadForos")
+    public List<CantidadForosByUsuariosDTO> ObtenerCantidadForos(){
+        List<String[ ]>lista=fS.CamtidadForos();
+        List<CantidadForosByUsuariosDTO>listaDTO=new ArrayList<>();
+        for(String[ ] columna:lista){
+            CantidadForosByUsuariosDTO dto=new CantidadForosByUsuariosDTO();
+            dto.setNombre_usuario(columna[0]);
+            dto.setCantidad_foros(Integer.parseInt(columna[1]));
+            listaDTO.add(dto);
+        }
+        return listaDTO;
+    }
 }

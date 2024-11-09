@@ -5,7 +5,8 @@ import pe.edu.upc.demorelaxup.entities.Usuario;
 public class ForosDTO {
     private int idForos;
     private String titulo;
-    private Usuario us;
+    private Usuario usuario;
+
     public int getIdForos() {
         return idForos;
     }
@@ -22,15 +23,13 @@ public class ForosDTO {
         this.titulo = titulo;
     }
 
-    public Usuario getUs() {
-        return us;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setUs(Usuario us) {
-        us = us;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
-
-
 }
 
 

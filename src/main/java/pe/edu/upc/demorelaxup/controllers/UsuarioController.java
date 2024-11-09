@@ -61,17 +61,4 @@ public class UsuarioController {
         uS.delete(id);
     }
 
-    @GetMapping("/cantidadForos")
-    public List<CantidadForosByUsuariosDTO> ObtenerCantidadForos(){
-            List<String[ ]>lista=uS.ForosByUsuario();
-            List<CantidadForosByUsuariosDTO>listaDTO=new ArrayList<>();
-            for(String[ ] columna:lista){
-                CantidadForosByUsuariosDTO dto=new CantidadForosByUsuariosDTO();
-                dto.setNombreUser(columna[0]);
-                dto.setQuantityForos(Integer.parseInt(columna[1]));
-                listaDTO.add(dto);
-
-            }
-            return listaDTO;
-    }
 }

@@ -1,9 +1,16 @@
 package pe.edu.upc.demorelaxup.dtos;
 
+import pe.edu.upc.demorelaxup.entities.Rutina;
+import pe.edu.upc.demorelaxup.entities.Usuario;
+
+import java.time.LocalDate;
+
 public class UsuarioRutinaDTO {
     private int idusuariorutina;
-    private String fecharealizacion;
-    private String progreso;
+    private LocalDate fecharealizacion;
+    private int progreso;
+    private Usuario usuario;
+    private Rutina rutina;
 
     public int getIdusuariorutina() {
         return idusuariorutina;
@@ -13,19 +20,35 @@ public class UsuarioRutinaDTO {
         this.idusuariorutina = idusuariorutina;
     }
 
-    public String getFecharealizacion() {
+    public LocalDate getFecharealizacion() {
         return fecharealizacion;
     }
 
-    public void setFecharealizacion(String fecharealizacion) {
+    public void setFecharealizacion(LocalDate fecharealizacion) {
         this.fecharealizacion = fecharealizacion;
     }
 
-    public String getProgreso() {
+    public int getProgreso() {
         return progreso;
     }
 
-    public void setProgreso(String progreso) {
+    public void setProgreso(int progreso) {
         this.progreso = progreso;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Rutina getRutina() {
+        return rutina;
+    }
+
+    public void setRutina(Rutina rutina) {
+        this.rutina = rutina;
     }
 }
