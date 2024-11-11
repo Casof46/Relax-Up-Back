@@ -28,4 +28,10 @@ public class PlanesServiceImplement implements IPlanesService {
 
     @Override
     public List<String[]> totalIngreso() { return pR.totalIngreso(); }
+
+    @Override
+    public void insert(Planes planes) {pR.save(planes);}
+
+    @Override
+    public void delete(int id) {pR.deleteById(id);}
 }

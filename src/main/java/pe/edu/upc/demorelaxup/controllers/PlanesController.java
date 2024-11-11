@@ -46,6 +46,16 @@ public class PlanesController {
         pS.update(ci);
     }
 
+    @PostMapping
+    public void insertar(@RequestBody PlanesDTO dto){
+        ModelMapper m=new ModelMapper();
+        Planes er=m.map(dto,Planes.class);
+        pS.insert(er);
+    }
+
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable("id") Integer id) {pS.delete(id);}
+
     @GetMapping("/cantidades")
     public List<TotalSuscripcionesByPlanDTO> obtenerCantidad(){
         List<String[]>lista=pS.totalSuscripcion();

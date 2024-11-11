@@ -6,10 +6,13 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.demorelaxup.dtos.CantidadForosByUsuariosDTO;
+import pe.edu.upc.demorelaxup.dtos.CantidadTecnicasRelajacionByRutinaDTO;
 import pe.edu.upc.demorelaxup.dtos.TecnicasRelajacionDTO;
 import pe.edu.upc.demorelaxup.entities.TecnicasRelajacion;
 import pe.edu.upc.demorelaxup.serviceinterfaces.ITecnicasRelajacionService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -56,4 +59,17 @@ public class TecnicasRelajacionController {
         tR.delete(id);
     }
 
+
+    @GetMapping("/cantidadTecnicas")
+    public List<CantidadTecnicasRelajacionByRutinaDTO> ObtenerCantidadTecnicas(){
+        List<String[ ]>lista=tR.CantidadTecnicas();
+        List<CantidadTecnicasRelajacionByRutinaDTO>listaDTO=new ArrayList<>();
+        for(String[ ] columna:lista){
+            CantidadTecnicasRelajacionByRutinaDTO dto=new CantidadTecnicasRelajacionByRutinaDTO();
+            dto.setNombre_rutina(columna[0]);
+            dto.setCantidad_tecnicas(Integer.parseInt(columna[1]));
+            listaDTO.add(dto);
+        }
+        return listaDTO;
+    }
 }

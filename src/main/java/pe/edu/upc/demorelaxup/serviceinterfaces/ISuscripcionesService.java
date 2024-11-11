@@ -11,4 +11,8 @@ public interface ISuscripcionesService {
     public void insert(Suscripciones suscripciones);
 
     public Suscripciones listId(int id);
+
+    public void update (Suscripciones a);
+
+    public void delete(int id);
 }

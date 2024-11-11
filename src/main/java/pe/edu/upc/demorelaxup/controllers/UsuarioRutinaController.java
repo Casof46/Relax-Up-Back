@@ -46,6 +46,10 @@ public class UsuarioRutinaController {
         UsuarioRutina u = m.map(dto, UsuarioRutina.class);
         Uu.update(u);
     }
+
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable("id") Integer id) {Uu.delete(id);}
+
     @GetMapping("/Progresocompletado")
     public List<ProgresoCompletadoDTO> progresoCompletado() {
         List<String[ ]>lista=Uu.progresocompleto();
