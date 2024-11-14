@@ -20,8 +20,8 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/usuarios")
-@PreAuthorize("hasAuthority('ADMIN')")
-@SecurityRequirement(name = "javasecurity")
+//@PreAuthorize("hasAuthority('ADMINISTRATOR')")
+//@SecurityRequirement(name = "javasecurity")
 public class UsuarioController {
     @Autowired
     private IUsuarioService uS;

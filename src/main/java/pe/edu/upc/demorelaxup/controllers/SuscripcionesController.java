@@ -14,8 +14,8 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/suscripciones")
-@PreAuthorize("hasAuthority('ADMIN')")
-@SecurityRequirement(name = "javasecurity")
+//@PreAuthorize("hasAuthority('ADMINISTRATOR')")
+//@SecurityRequirement(name = "javasecurity")
 public class SuscripcionesController {
 
     @Autowired

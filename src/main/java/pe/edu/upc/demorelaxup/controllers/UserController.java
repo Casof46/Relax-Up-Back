@@ -14,8 +14,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@PreAuthorize("hasAuthority('ADMIN')")
-@SecurityRequirement(name = "javasecurity")
+//@PreAuthorize("hasAuthority('ADMINISTRATOR')")
+//@SecurityRequirement(name = "javasecurity")
 @RequestMapping("/users")
 public class UserController {
     @Autowired

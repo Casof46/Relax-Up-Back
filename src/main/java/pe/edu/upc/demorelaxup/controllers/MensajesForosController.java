@@ -15,8 +15,8 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/mensajeforos")
-@PreAuthorize("hasAuthority('ADMIN')")
-@SecurityRequirement(name = "javasecurity")
+//@PreAuthorize("hasAuthority('ADMINISTRATOR')")
+//@SecurityRequirement(name = "javasecurity")
 public class MensajesForosController {
 
     @Autowired
