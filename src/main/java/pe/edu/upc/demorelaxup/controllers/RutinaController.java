@@ -6,12 +6,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.upc.demorelaxup.dtos.CantidadRutinasByUsuarioDTO;
 import pe.edu.upc.demorelaxup.dtos.RutinaDTO;
 import pe.edu.upc.demorelaxup.entities.Rutina;
 import pe.edu.upc.demorelaxup.serviceinterfaces.IRutinaService;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -58,19 +56,5 @@ public class RutinaController {
         rS.delete(id);
     }
 
-    @GetMapping("/cantidadRutinas")
-    public List<CantidadRutinasByUsuarioDTO> ObtenerCantidadRutinas(){
-        List<String[ ]>lista=rS.RutinasByUsuario();
-        List<CantidadRutinasByUsuarioDTO>listaDTO=new ArrayList<>();
-        for(String[] columna:lista){
-            CantidadRutinasByUsuarioDTO dto=new CantidadRutinasByUsuarioDTO();
-            dto.setIdrutina(Integer.parseInt(columna[0]));
-            dto.setNombre_usuario(columna[1]);
-            dto.setCantidad_rutinas(Integer.parseInt(columna[2]));
-            listaDTO.add(dto);
-
-        }
-        return listaDTO;
-    }
 
 }

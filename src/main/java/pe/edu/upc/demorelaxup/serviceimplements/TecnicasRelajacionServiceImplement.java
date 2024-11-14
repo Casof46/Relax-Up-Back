@@ -27,4 +27,9 @@ public class TecnicasRelajacionServiceImplement implements ITecnicasRelajacionSe
 
     @Override
     public void delete(int id) {tR.deleteById(id);}
+
+    @Override
+    public List<String[]> CantidadTecnicas() {
+        return tR.CantidadTecnicas();
+    }
 }

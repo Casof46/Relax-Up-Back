@@ -14,4 +14,6 @@ public interface ITecnicasRelajacionService {
     public void update(TecnicasRelajacion a);
 
     public void delete(int id);
+
+    public List<String[ ]> CantidadTecnicas();
 }

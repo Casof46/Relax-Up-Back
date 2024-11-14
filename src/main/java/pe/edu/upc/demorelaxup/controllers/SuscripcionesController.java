@@ -42,4 +42,14 @@ public class SuscripcionesController {
         SuscripcionesDTO dto=m.map(sS.listId(id),SuscripcionesDTO.class);
         return dto;
     }
+
+    @PutMapping
+    public void modificar(@RequestBody SuscripcionesDTO dto){
+        ModelMapper m = new ModelMapper();
+        Suscripciones mp=m.map(dto,Suscripciones.class);
+        sS.update(mp);
+    }
+
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable("id")Integer id) {sS.delete(id);}
 }

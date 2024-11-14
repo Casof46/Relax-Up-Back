@@ -22,4 +22,10 @@ public class SuscripcionesServiceImplement implements ISuscripcionesService {
 
     @Override
     public Suscripciones listId(int id) { return sR.findById(id).orElse(new Suscripciones()); }
+
+    @Override
+    public void update (Suscripciones a) {sR.save(a);}
+
+    @Override
+    public void delete(int id) {sR.deleteById(id);}
 }
