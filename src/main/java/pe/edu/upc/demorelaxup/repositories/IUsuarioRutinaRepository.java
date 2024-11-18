@@ -10,12 +10,14 @@ import java.util.List;
 @Repository
 public interface IUsuarioRutinaRepository extends JpaRepository<UsuarioRutina, Integer> {
     @Query(value = "SELECT \n" +
-            "    u.id_usuario,u.nombre_usuario,p.progreso\n" +
+            "    u.id_usuario, \n" +
+            "    u.nombre_usuario, \n" +
+            "    p.progreso\n" +
             "FROM \n" +
             "    usuario u\n" +
-            "JOIN \n" +
+            "INNER JOIN \n" +
             "    usuario_rutina p ON u.id_usuario = p.id_usuario\n" +
             "WHERE \n" +
-            "    p.progreso = 100;",nativeQuery = true)
+            "    p.progreso IS NOT NULL;",nativeQuery = true)
     public List<String[]> progresoCompletado();
 }

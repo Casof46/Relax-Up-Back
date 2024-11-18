@@ -60,18 +60,20 @@ public class ForosController {
         fS.delete(id);}
 
 
+
     @GetMapping("/CantidadMensajes")
     public List<CantidadMensajesForosDTO> ObtenerCantidadMensajes() {
-     List<String[ ]>lista=fS.CantidadMensajesForos();
-     List<CantidadMensajesForosDTO>listaDTO=new ArrayList<>();
-     for (String[] columna:lista){
-         CantidadMensajesForosDTO dto=new CantidadMensajesForosDTO();
-         dto.setNameForo(columna[0]);
-         dto.setNameUser(columna[1]);
-         dto.setCantidadMensajesForos(Integer.parseInt(columna[2]));
-         listaDTO.add(dto);
-     }
-     return listaDTO;
+        List<String[ ]>lista=fS.CantidadMensajesForos();
+        List<CantidadMensajesForosDTO>listaDTO=new ArrayList<>();
+        for (String[] columna:lista){
+            CantidadMensajesForosDTO dto=new CantidadMensajesForosDTO();
+            dto.setId_Mensajesforos(Integer.parseInt(columna[0]));
+            dto.setNameForo(columna[1]);
+            dto.setNameUser(columna[2]);
+            dto.setCantidadMensajesForos(Integer.parseInt(columna[2]));
+            listaDTO.add(dto);
+        }
+        return listaDTO;
     }
     @GetMapping("/cantidadForos")
     public List<CantidadForosByUsuariosDTO> ObtenerCantidadForos(){
@@ -79,10 +81,12 @@ public class ForosController {
         List<CantidadForosByUsuariosDTO>listaDTO=new ArrayList<>();
         for(String[ ] columna:lista){
             CantidadForosByUsuariosDTO dto=new CantidadForosByUsuariosDTO();
-            dto.setNombre_usuario(columna[0]);
-            dto.setCantidad_foros(Integer.parseInt(columna[1]));
+            dto.setId_Foros(Integer.parseInt(columna[0]));
+            dto.setNombre_usuario(columna[1]);
+            dto.setCantidad_foros(Integer.parseInt(columna[2]));
             listaDTO.add(dto);
+
         }
         return listaDTO;
-    }
+}
 }

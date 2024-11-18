@@ -15,7 +15,7 @@ public class CORS implements Filter {
 
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
-		}
+	}
 
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
@@ -34,9 +34,7 @@ public class CORS implements Filter {
 		} else {
 			chain.doFilter(req, res);
 		}
-		// chain.doFilter(req, res);
 	}
-
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub

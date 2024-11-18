@@ -20,14 +20,12 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/usuarios")
-//@PreAuthorize("hasAuthority('ADMINISTRATOR')")
-//@SecurityRequirement(name = "javasecurity")
 public class UsuarioController {
     @Autowired
     private IUsuarioService uS;
 
     @GetMapping
-    public List<UsuarioDTO>listar(){
+    public List<UsuarioDTO> listar(){
 
         return uS.list().stream().map(x->{
             ModelMapper m  = new ModelMapper();

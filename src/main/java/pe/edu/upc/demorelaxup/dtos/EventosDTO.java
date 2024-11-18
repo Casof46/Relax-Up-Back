@@ -14,6 +14,7 @@ public class EventosDTO {
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private LocalTime hora;
+    private Boolean confirmacion;
     private Usuario usuario;
 
     public int getIdeventos() {
@@ -70,5 +71,13 @@ public class EventosDTO {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    public Boolean getConfirmacion() {
+        return confirmacion;
+    }
+
+    public void setConfirmacion(Boolean confirmacion) {
+        this.confirmacion = confirmacion;
     }
 }

@@ -4,20 +4,18 @@ import pe.edu.upc.demorelaxup.entities.Rol;
 
 public class UsuarioDTO {
     private int idUsuario;
+
     private String nombreUsuario;
+
     private String correoUsuario;
+
     private int telefonoUsuario;
+
     private String contrasenaUsuario;
+
     private int progresoUsuario;
+
     private Rol rol;
-
-    public String getNombreUsuario() {
-        return nombreUsuario;
-    }
-
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-    }
 
     public int getIdUsuario() {
         return idUsuario;
@@ -25,6 +23,14 @@ public class UsuarioDTO {
 
     public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
+    }
+
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     public String getCorreoUsuario() {

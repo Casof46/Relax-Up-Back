@@ -9,17 +9,22 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUsuario;
+
     @Column(name = "nombreUsuario", nullable = false, length = 70)
     private String nombreUsuario;
+
     @Column(name = "correoUsuario", nullable = false, length = 70)
     private String correoUsuario;
+
     @Column(name = "telefonoUsuario", nullable = false, length = 9)
     private int telefonoUsuario;
+
     @Column(name = "contrasenaUsuario", nullable = false, length = 40)
     private String contrasenaUsuario;
+
     @Column(name = "progresoUsuario", nullable = false, length = 10)
     private int progresoUsuario;
-    @JsonIgnore
+
     @ManyToOne
     @JoinColumn(name = "idRol")
     private Rol rol;

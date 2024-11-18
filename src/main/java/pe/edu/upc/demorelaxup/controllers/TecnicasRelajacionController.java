@@ -17,9 +17,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-//@RequestMapping("/tecnicasrelajacion")
+@RequestMapping("/tecnicasrelajacion")
 //@PreAuthorize("hasAuthority('ADMINISTRATOR')")
-@SecurityRequirement(name = "javasecurity")
+//@SecurityRequirement(name = "javasecurity")
 public class TecnicasRelajacionController {
 
     @Autowired
