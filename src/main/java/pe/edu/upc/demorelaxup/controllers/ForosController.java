@@ -67,9 +67,8 @@ public class ForosController {
         List<CantidadMensajesForosDTO>listaDTO=new ArrayList<>();
         for (String[] columna:lista){
             CantidadMensajesForosDTO dto=new CantidadMensajesForosDTO();
-            dto.setId_Mensajesforos(Integer.parseInt(columna[0]));
-            dto.setNameForo(columna[1]);
-            dto.setNameUser(columna[2]);
+            dto.setNameForo(columna[0]);
+            dto.setNameUser(columna[1]);
             dto.setCantidadMensajesForos(Integer.parseInt(columna[2]));
             listaDTO.add(dto);
         }
@@ -81,9 +80,8 @@ public class ForosController {
         List<CantidadForosByUsuariosDTO>listaDTO=new ArrayList<>();
         for(String[ ] columna:lista){
             CantidadForosByUsuariosDTO dto=new CantidadForosByUsuariosDTO();
-            dto.setId_Foros(Integer.parseInt(columna[0]));
-            dto.setNombre_usuario(columna[1]);
-            dto.setCantidad_foros(Integer.parseInt(columna[2]));
+            dto.setNombre_usuario(columna[0]);
+            dto.setCantidad_foros(Integer.parseInt(columna[1]));
             listaDTO.add(dto);
 
         }
