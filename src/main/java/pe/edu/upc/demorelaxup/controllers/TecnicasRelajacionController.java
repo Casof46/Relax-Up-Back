@@ -66,8 +66,8 @@ public class TecnicasRelajacionController {
         List<CantidadTecnicasRelajacionByRutinaDTO>listaDTO=new ArrayList<>();
         for(String[ ] columna:lista){
             CantidadTecnicasRelajacionByRutinaDTO dto=new CantidadTecnicasRelajacionByRutinaDTO();
-            dto.setNombre_rutina(columna[0]);
-            dto.setCantidad_tecnicas(Integer.parseInt(columna[1]));
+            dto.setNombre_tecnicas(columna[0]);
+            dto.setCantidad_rutinas(Integer.parseInt(columna[1]));
             listaDTO.add(dto);
         }
         return listaDTO;

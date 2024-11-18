@@ -35,4 +35,9 @@ public class RutinaServiceImplement implements IRutinaService {
     public List<String[]> RutinasByUsuario() {
         return rR.RutinasByUsuario();
     }
+
+    @Override
+    public List<String[]> CantidadRutinas() {
+        return rR.CantidadRutinas();
+    }
 }

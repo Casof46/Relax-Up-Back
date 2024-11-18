@@ -14,4 +14,10 @@ public interface IRutinaRepository extends JpaRepository<Rutina, Integer> {
             "             on u.id_usuario=f.id_usuario \n" +
             "             group by u.nombre_usuario,id_rutina",nativeQuery = true)
     public List<String[ ]> RutinasByUsuario();
+
+    @Query(value = "Select t.nombre_tecnica, count(f.id_rutina)\n" +
+            "            from tecnicas_relajacion t inner join rutina f \n" +
+            "            on t.id_tecnica_relajacion=f.id_tecnica_relajacion \n" +
+            "            group by t.nombre_tecnica",nativeQuery = true)
+    public List<String[ ]> CantidadRutinas();
 }

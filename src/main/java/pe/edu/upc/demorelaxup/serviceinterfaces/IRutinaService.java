@@ -11,4 +11,5 @@ public interface IRutinaService {
     public void update(Rutina rutina);
     public void delete(int id);
     public List<String[ ]> RutinasByUsuario();
+    public List<String[ ]> CantidadRutinas();
 }

@@ -1,23 +1,23 @@
 package pe.edu.upc.demorelaxup.dtos;
 
 public class CantidadTecnicasRelajacionByRutinaDTO {
-    public String nombre_rutina;
+    public String nombre_tecnicas;
 
-    public int cantidad_tecnicas;
+    public int cantidad_rutinas;
 
-    public String getNombre_rutina() {
-        return nombre_rutina;
+    public String getNombre_tecnicas() {
+        return nombre_tecnicas;
     }
 
-    public void setNombre_rutina(String nombre_rutina) {
-        this.nombre_rutina = nombre_rutina;
+    public void setNombre_tecnicas(String nombre_tecnicas) {
+        this.nombre_tecnicas = nombre_tecnicas;
     }
 
-    public int getCantidad_tecnicas() {
-        return cantidad_tecnicas;
+    public int getCantidad_rutinas() {
+        return cantidad_rutinas;
     }
 
-    public void setCantidad_tecnicas(int cantidad_tecnicas) {
-        this.cantidad_tecnicas = cantidad_tecnicas;
-    }
+    public void setCantidad_rutinas(int cantidad_rutinas) {
+        this.cantidad_rutinas = cantidad_rutinas;
+}
 }
