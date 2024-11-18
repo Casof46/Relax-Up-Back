@@ -4,7 +4,7 @@ public class CantidadForosByUsuariosDTO {
     public int Id_Foros;
     public String nombre_usuario;
     public int cantidad_foros;
-
+//p
     public int getId_Foros() {
         return Id_Foros;
     }
