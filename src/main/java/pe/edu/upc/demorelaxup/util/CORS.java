@@ -23,7 +23,10 @@ public class CORS implements Filter {
 		HttpServletResponse response = (HttpServletResponse) res;
 		HttpServletRequest request = (HttpServletRequest) req;
 
-		response.setHeader("Access-Control-Allow-Origin", "*");
+		// Specify your frontend URL here
+		String frontendUrl = "https://demo-hazel-seven.vercel.app/"; // Change this to your actual frontend URL
+
+		response.setHeader("Access-Control-Allow-Origin", frontendUrl);
 		response.setHeader("Access-Control-Allow-Methods", "DELETE, GET, OPTIONS, PATCH, POST, PUT");
 		response.setHeader("Access-Control-Max-Age", "3600");
 		response.setHeader("Access-Control-Allow-Headers",
@@ -35,8 +38,9 @@ public class CORS implements Filter {
 			chain.doFilter(req, res);
 		}
 	}
+
 	@Override
 	public void destroy() {
-		// TODO Auto-generated method stub
+		// Cleanup code if needed
 	}
 }
