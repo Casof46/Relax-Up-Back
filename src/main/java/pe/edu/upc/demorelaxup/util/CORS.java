@@ -25,7 +25,7 @@ public class CORS implements Filter {
 		HttpServletRequest request = (HttpServletRequest) req;
 
 		// Especifica la URL de tu frontend aquí
-		response.setHeader("Access-Control-Allow-Origin", "https://relaxupfrontenddeploy.vercel.app");
+		response.setHeader("Access-Control-Allow-Origin", "https://relaxupfrontenddeploy.vercel.app/");
 		response.setHeader("Access-Control-Allow-Origin", "https://relaxupfrontenddeploy.vercel.app/usuarios");
 		response.setHeader("Access-Control-Allow-Origin", "https://relaxupfrontenddeploy.vercel.app/usuarios/nuevo");
 		response.setHeader("Access-Control-Allow-Origin", "https://relaxupfrontenddeploy.vercel.app/rol");
@@ -61,7 +61,6 @@ public class CORS implements Filter {
 		response.setHeader("Access-Control-Allow-Origin", "https://relaxupfrontenddeploy.vercel.app/reportes/suscripciones");
 		response.setHeader("Access-Control-Allow-Origin", "https://relaxupfrontenddeploy.vercel.app/reportes/Forosporusuario");
 		response.setHeader("Access-Control-Allow-Origin", "https://relaxupfrontenddeploy.vercel.app/reportes/Mensajeporforo");
-
 		response.setHeader("Access-Control-Allow-Methods", "DELETE, GET, OPTIONS, PATCH, POST, PUT");
 		response.setHeader("Access-Control-Max-Age", "3600");
 		response.setHeader("Access-Control-Allow-Headers",
