@@ -24,9 +24,9 @@ public class CORS implements Filter {
 		HttpServletRequest request = (HttpServletRequest) req;
 
 		// Specify your frontend URL here
-		String frontendUrl = "https://demo-hazel-seven.vercel.app/"; // Change this to your actual frontend URL
+		String frontendUrl = "https://relaxupfrontenddeploy.vercel.app"; // Change this to your actual frontend URL
 
-		response.setHeader("Access-Control-Allow-Origin","*");
+		response.setHeader("Access-Control-Allow-Origin",frontendUrl);
 		response.setHeader("Access-Control-Allow-Methods", "DELETE, GET, OPTIONS, PATCH, POST, PUT");
 		response.setHeader("Access-Control-Max-Age", "3600");
 		response.setHeader("Access-Control-Allow-Headers",
