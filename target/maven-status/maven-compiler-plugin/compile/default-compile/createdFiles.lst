@@ -8,6 +8,7 @@ pe\edu\upc\demorelaxup\entities\Eventos.class
 pe\edu\upc\demorelaxup\serviceinterfaces\IMensajesForosService.class
 pe\edu\upc\demorelaxup\controllers\ForosController.class
 pe\edu\upc\demorelaxup\dtos\MetodoPagoDTO.class
+pe\edu\upc\demorelaxup\dtos\CantidadTecnicasRelajacionByRutinaDTO.class
 pe\edu\upc\demorelaxup\entities\MensajesForos.class
 pe\edu\upc\demorelaxup\entities\MetodoPago.class
 pe\edu\upc\demorelaxup\entities\TecnicasRelajacion.class
@@ -34,7 +35,6 @@ pe\edu\upc\demorelaxup\serviceimplements\UsuarioServiceImplement.class
 pe\edu\upc\demorelaxup\serviceinterfaces\IUsuarioRutinaService.class
 pe\edu\upc\demorelaxup\repositories\IMetodoPagoRepository.class
 pe\edu\upc\demorelaxup\securities\WebSecurityConfig.class
-pe\edu\upc\demorelaxup\dtos\CantidadRutinasByUsuarioDTO.class
 pe\edu\upc\demorelaxup\repositories\IUsuarioRepository.class
 pe\edu\upc\demorelaxup\repositories\IMensajesForosRepository.class
 pe\edu\upc\demorelaxup\serviceinterfaces\IEmergenciaService.class
@@ -79,6 +79,7 @@ pe\edu\upc\demorelaxup\repositories\IEmergenciaRepository.class
 pe\edu\upc\demorelaxup\repositories\IRoleRepository.class
 pe\edu\upc\demorelaxup\dtos\EventosDTO.class
 pe\edu\upc\demorelaxup\serviceimplements\RolServiceImplement.class
+pe\edu\upc\demorelaxup\util\CORS.class
 pe\edu\upc\demorelaxup\serviceinterfaces\IPlanesService.class
 pe\edu\upc\demorelaxup\dtos\TotalIngresosbyPlanDTO.class
 pe\edu\upc\demorelaxup\controllers\SuscripcionesController.class
