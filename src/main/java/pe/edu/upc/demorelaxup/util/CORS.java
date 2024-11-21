@@ -44,3 +44,6 @@ public class CORS implements Filter {
 		// Cleanup code if needed
 	}
 }
+//spring.datasource.url=jdbc:postgresql://localhost/basedatosrelaxup
+//spring.datasource.username=postgres
+//spring.datasource.password=040402
