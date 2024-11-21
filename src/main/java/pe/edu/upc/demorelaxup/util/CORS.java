@@ -15,6 +15,7 @@ public class CORS implements Filter {
 
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
+		// Inicialización si es necesaria
 	}
 
 	@Override
@@ -23,15 +24,14 @@ public class CORS implements Filter {
 		HttpServletResponse response = (HttpServletResponse) res;
 		HttpServletRequest request = (HttpServletRequest) req;
 
-		// Specify your frontend URL here
-		String frontendUrl = "https://relaxupfrontenddeploy.vercel.app"; // Change this to your actual frontend URL
-
-		response.setHeader("Access-Control-Allow-Origin",frontendUrl);
+		// Especifica la URL de tu frontend aquí
+		response.setHeader("Access-Control-Allow-Origin", "https://relaxupfrontenddeploy.vercel.app");
 		response.setHeader("Access-Control-Allow-Methods", "DELETE, GET, OPTIONS, PATCH, POST, PUT");
 		response.setHeader("Access-Control-Max-Age", "3600");
 		response.setHeader("Access-Control-Allow-Headers",
 				"x-requested-with, authorization, Content-Type, Authorization, credential, X-XSRF-TOKEN");
 
+		// Manejo de solicitudes OPTIONS
 		if ("OPTIONS".equalsIgnoreCase(request.getMethod())) {
 			response.setStatus(HttpServletResponse.SC_OK);
 		} else {
@@ -41,7 +41,7 @@ public class CORS implements Filter {
 
 	@Override
 	public void destroy() {
-		// Cleanup code if needed
+		// Código de limpieza si es necesario
 	}
 }
 //spring.datasource.url=jdbc:postgresql://localhost/basedatosrelaxup
